@@ -1,0 +1,13 @@
+{
+    "name": "products-api",
+    "version": "1.0.0",
+    "description": "A simple RESTful API for products.",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js"
+    },
+    "keywords": ["nodejs", "rest-api", "products"],
+    "author": "Your Name",
+    "license": "ISC"
+  }
+  
