@@ -4,4 +4,4 @@ This project is a visually appealing CV template built using React and styled wi
 
 ## Screenshot
 
-![CV Template Screenshot](https://github.com/tasbeehismail/Mern-Stack-Tasks/tree/main/Week-6/vite-cv/Screenshot.png)
+![CV Template Screenshot](https://github.com/tasbeehismail/Mern-Stack-Tasks/blob/main/Week-6/vite-cv/Screenshot.png)
