@@ -5,8 +5,9 @@ function Contact() {
   return (
     <section className="contact">
       <h3>Contact</h3>
-      <p>Email: tsbeehismaill@gmail.com</p>
-      <p>Phone: (123) 456-7890</p>
+      <p>📍 Address: Behaira, Egypt</p>
+      <p>📧 Email: tsbeehismaill@gmail.com</p>
+      <p>📞 Phone: (123) 456-7890</p>
     </section>
   );
 }
