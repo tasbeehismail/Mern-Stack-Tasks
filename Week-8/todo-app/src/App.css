@@ -1,0 +1,83 @@
+.container {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .todo-form input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .todo-form button {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .todo-form button:hover {
+    background-color: #333;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+  
+  .todo-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .light {
+    background-color: #d1d5db;
+  }
+  
+  .dark {
+    background-color: #9ca3af;
+  }
+  
+  button {
+    margin-left: 5px;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 10px; 
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .delete-btn {
+    background-color: white;
+    border: 1px solid black;
+  }
+  
+  .edit-btn {
+    background-color: white;
+    border: 1px solid black;
+  }
+  
+  .delete-btn:hover,
+  .edit-btn:hover {
+    background-color: #f3f4f6;
+  }
+  
