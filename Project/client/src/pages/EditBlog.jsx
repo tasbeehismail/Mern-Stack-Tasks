@@ -14,15 +14,18 @@ const EditBlog = () => {
     useEffect(() => {
         const fetchBlog = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/v1/api/blogs/${id}`);
-                const blog = response.data;
-                setTitle(blog.title);
-                setBody(blog.body);
-                setPhoto(blog.photo);
-                setTags(blog.tags.join(','));
+                const response = await axios.get(`http://localhost:3000/v1/api/blogs/${id}`, {
+                    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+                });
+                console.log('Blog fetched:', response.data); // Debugging: Log the response
+                const blog = response.data.data; // Ensure we access the correct part of the response
+                setTitle(blog.title || '');
+                setBody(blog.body || '');
+                setPhoto(blog.photo || '');
+                setTags(blog.tags ? blog.tags.join(',') : '');
             } catch (error) {
                 console.error('Error fetching blog:', error);
-                setError(error.response?.data?.error || 'Failed to fetch blog');
+                setError(error.response?.data?.message || 'Failed to fetch blog');
             }
         };
 

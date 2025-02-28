@@ -19,7 +19,13 @@ router.post("/",
     asyncHandler(blogController.createBlog));
 
 router.get("/me", 
-    verifyToken(), asyncHandler(blogController.getMyBlogs)); 
+    verifyToken(), 
+    asyncHandler(blogController.getMyBlogs)); 
+
+
+router.get("/:id", 
+    verifyToken(), 
+    asyncHandler(blogController.getSingleBlog)); 
 
 router.put("/:id", 
     verifyToken(), 

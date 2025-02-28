@@ -13,10 +13,15 @@ const Login = () => {
         try {
             const response = await axios.post('http://localhost:3000/v1/api/auth/login', { loginField, password });
             console.log('Response:', response); // Debugging: Log the entire response
-            localStorage.setItem('token', response.data.token); // Use the correct field name
-            console.log('Token stored:', response.data.token); // Debugging: Check if token is stored
-            navigate('/');
-            console.log('Navigating to home page'); // Debugging: Check if navigate is called
+            const token = response.data.Token; // Ensure the correct key is used
+            if (token) {
+                localStorage.setItem('token', token); // Store the token in localStorage
+                console.log('Token stored:', token); // Debugging: Check if token is stored
+                navigate('/');
+                console.log('Navigating to home page'); // Debugging: Check if navigate is called
+            } else {
+                setError('Failed to retrieve token. Please try again.');
+            }
         } catch (err) {
             setError(err.response?.data?.error || 'Failed to login. Please try again.');
             console.error('Error logging in:', err.response?.data);

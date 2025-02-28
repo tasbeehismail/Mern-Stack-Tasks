@@ -13,10 +13,7 @@ import APIFeatures from '../utils/APIFeatures.js';
  */
 export const getAllBlogs = async (req, res, next) => {
     const features = new APIFeatures(Blog.find(), req.query)
-        .filter() 
-        .sort()
-        .limitFields() 
-        .paginate();
+        .sort();
 
     const blogs = await features.query.populate('author', 'firstName lastName');
 
@@ -175,4 +172,22 @@ export const deleteBlog = async (req, res, next) => {
         success: true,
         message: 'Blog deleted successfully',
     });
+};
+
+
+export const getSingleBlog = async (req, res, next) => {
+    const { id } = req.params;
+
+    const blog = await Blog.findById(id).populate('author', 'firstName lastName email');
+
+    if (!blog) {
+        return next(new AppError('Blog not found', 404));
+    }
+
+    res.status(200).json({
+        success: true,
+        message: 'Blog fetched successfully',
+        data: blog,
+    });
+    
 };
