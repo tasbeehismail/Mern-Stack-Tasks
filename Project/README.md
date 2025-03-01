@@ -65,5 +65,5 @@ This is a full-stack blog website built with React, Node.js, Express, and MongoD
 
 ## Screenshots
 
-![Blog Website](https://github.com/tasbeehismail/Mern-Stack-Tasks/tree/main/Project/Screenshot.gif)
+![](https://github.com/tasbeehismail/Mern-Stack-Tasks/blob/main/Project/Screenshot.gif)
 
